@@ -685,7 +685,7 @@ function _Chat() {
   };
 
   const doSubmit = (userInput: string) => {
-    console.log('你是开始输入吗')
+    console.log("你是开始输入吗");
     if (userInput.trim() === "") return;
     const matchCommand = chatCommands.match(userInput);
     if (matchCommand.matched) {
@@ -1060,40 +1060,40 @@ function _Chat() {
             {Locale.Chat.SubTitle(session.messages.length)}
           </div>
         </div>
-        <div className="window-actions">
-          {!isMobileScreen && (
-            <div className="window-action-button">
-              <IconButton
-                icon={<RenameIcon />}
-                bordered
-                onClick={() => setIsEditingMessage(true)}
-              />
-            </div>
-          )}
-          <div className="window-action-button">
-            <IconButton
-              icon={<ExportIcon />}
-              bordered
-              title={Locale.Chat.Actions.Export}
-              onClick={() => {
-                setShowExport(true);
-              }}
-            />
-          </div>
-          {showMaxIcon && (
-            <div className="window-action-button">
-              <IconButton
-                icon={config.tightBorder ? <MinIcon /> : <MaxIcon />}
-                bordered
-                onClick={() => {
-                  config.update(
-                    (config) => (config.tightBorder = !config.tightBorder),
-                  );
-                }}
-              />
-            </div>
-          )}
-        </div>
+        {/*<div className="window-actions">*/}
+        {/*  {!isMobileScreen && (*/}
+        {/*    <div className="window-action-button">*/}
+        {/*      <IconButton*/}
+        {/*        icon={<RenameIcon />}*/}
+        {/*        bordered*/}
+        {/*        onClick={() => setIsEditingMessage(true)}*/}
+        {/*      />*/}
+        {/*    </div>*/}
+        {/*  )}*/}
+        {/*<div className="window-action-button">*/}
+        {/*  <IconButton*/}
+        {/*    icon={<ExportIcon />}*/}
+        {/*    bordered*/}
+        {/*    title={Locale.Chat.Actions.Export}*/}
+        {/*    onClick={() => {*/}
+        {/*      setShowExport(true);*/}
+        {/*    }}*/}
+        {/*  />*/}
+        {/*</div>*/}
+        {/*{showMaxIcon && (*/}
+        {/*  <div className="window-action-button">*/}
+        {/*    <IconButton*/}
+        {/*      icon={config.tightBorder ? <MinIcon /> : <MaxIcon />}*/}
+        {/*      bordered*/}
+        {/*      onClick={() => {*/}
+        {/*        config.update(*/}
+        {/*          (config) => (config.tightBorder = !config.tightBorder),*/}
+        {/*        );*/}
+        {/*      }}*/}
+        {/*    />*/}
+        {/*  </div>*/}
+        {/*)}*/}
+        {/*</div>*/}
 
         <PromptToast
           showToast={!hitBottom}
