@@ -132,7 +132,7 @@ function fillTemplateWith(input: string, modelConfig: ModelConfig) {
   }
 
   Object.entries(vars).forEach(([name, value]) => {
-    output = output.replaceAll(`{{${name}}}`, value);
+    output = output.replace(`{{${name}}}`, value);
   });
 
   return output;
